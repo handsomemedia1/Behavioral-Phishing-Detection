@@ -1,0 +1,13 @@
+{
+    "model_name": "Random Forest",
+    "metric": "f1_score",
+    "value": 0.94,
+    "all_metrics": {
+      "model_name": "Random Forest",
+      "accuracy": 0.94,
+      "precision": 0.95,
+      "recall": 0.93,
+      "f1_score": 0.94,
+      "roc_auc": 0.96
+    }
+  }

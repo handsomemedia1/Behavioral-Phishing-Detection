@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behavioral Phishing Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">Behavioral Phishing Detection</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('main.index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/handsomemedia1/Behavioral-Phishing-Detection" target="_blank">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Email Phishing Analyzer</h3>
+                    </div>
+                    <div class="card-body">
+                        {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>
+                        {% endif %}
+
+                        <p class="lead">Paste an email you suspect might be phishing to analyze its content for suspicious patterns.</p>
+                        
+                        <form action="/analyze" method="post">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Content</label>
+                                <textarea class="form-control" id="email" name="email" rows="10" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Analyze Email</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card shadow mt-4">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0">How It Works</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 text-center mb-3">
+                                <div class="rounded-circle bg-light p-3 d-inline-block">
+                                    <h1 class="text-primary mb-0">1</h1>
+                                </div>
+                                <h5 class="mt-3">Input Email</h5>
+                                <p>Paste the suspicious email content into the analyzer.</p>
+                            </div>
+                            <div class="col-md-4 text-center mb-3">
+                                <div class="rounded-circle bg-light p-3 d-inline-block">
+                                    <h1 class="text-primary mb-0">2</h1>
+                                </div>
+                                <h5 class="mt-3">AI Analysis</h5>
+                                <p>Our AI model analyzes linguistic patterns and other behavioral indicators.</p>
+                            </div>
+                            <div class="col-md-4 text-center mb-3">
+                                <div class="rounded-circle bg-light p-3 d-inline-block">
+                                    <h1 class="text-primary mb-0">3</h1>
+                                </div>
+                                <h5 class="mt-3">Get Results</h5>
+                                <p>Receive a detailed report with 94% accuracy on phishing likelihood.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-3">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Behavioral Phishing Detection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

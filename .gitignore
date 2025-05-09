@@ -1,0 +1,22 @@
+# System files
+AppData/
+NTUSER.*
+ntuser.*
+*.regtrans-ms
+*.TM.blf
+*.TMContainer*.regtrans-ms
+
+# IDE/Editor files
+.vscode/
+.spyder-py3/
+.ipython/
+
+# Python/Anaconda
+.anaconda/
+.conda/
+.condarc
+__pycache__/
+*.pyc
+
+# OneDrive sync files
+OneDrive/

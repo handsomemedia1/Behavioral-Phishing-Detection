@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Behavioral Phishing Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">Behavioral Phishing Detection</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('main.about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/handsomemedia1/Behavioral-Phishing-Detection" target="_blank">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">About Behavioral Phishing Detection</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Project Overview</h4>
+                        <p class="lead">Behavioral Phishing Detection is an AI-powered system that analyzes linguistic patterns and behavioral cues in emails to detect sophisticated phishing attempts with 94% accuracy.</p>
+                        
+                        <p>Unlike traditional rule-based systems that rely on blacklists or simple pattern matching, this project uses advanced Natural Language Processing (NLP) and Machine Learning techniques to identify the subtle linguistic and behavioral patterns that characterize phishing emails.</p>
+                        
+                        <h4 class="mt-4">Key Features</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Linguistic Pattern Analysis</h5>
+                                        <p class="card-text">Detects abnormal language patterns, urgency indicators, and manipulation tactics common in phishing attempts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">URL Analysis</h5>
+                                        <p class="card-text">Examines embedded URLs for suspicious patterns, redirects, and deceptive domain names.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Machine Learning Classification</h5>
+                                        <p class="card-text">Utilizes advanced ML algorithms to predict phishing probability based on multiple behavioral indicators.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">High Accuracy</h5>
+                                        <p class="card-text">Achieves 94% accuracy on test datasets, outperforming traditional rule-based systems.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="mt-4">Technical Details</h4>
+                        <p>This project is built using Python and leverages several powerful libraries:</p>
+                        <ul>
+                            <li><strong>Natural Language Processing:</strong> NLTK and SpaCy for text analysis</li>
+                            <li><strong>Machine Learning:</strong> Scikit-learn and TensorFlow for model training and evaluation</li>
+                            <li><strong>Web Application:</strong> Flask for the web interface and API</li>
+                            <li><strong>Data Processing:</strong> Pandas and NumPy for data manipulation</li>
+                        </ul>
+                        
+                        <h4 class="mt-4">How It Works</h4>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <div class="process-flow">
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <div class="process-step">
+                                                <div class="process-circle">1</div>
+                                                <h5>Email Parsing</h5>
+                                                <p>Extracts text and metadata from emails</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="process-step">
+                                                <div class="process-circle">2</div>
+                                                <h5>Feature Extraction</h5>
+                                                <p>Analyzes linguistic patterns, URLs, and other behavioral cues</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="process-step">
+                                                <div class="process-circle">3</div>
+                                                <h5>Classification</h5>
+                                                <p>ML model predicts phishing probability</p>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="process-step">
+                                                <div class="process-circle">4</div>
+                                                <h5>Results</h5>
+                                                <p>Provides detailed analysis and risk assessment</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="mt-4">About the Author</h4>
+                        <p>This project was developed by [Your Name], with a focus on applying AI and NLP techniques to cybersecurity challenges. The motivation behind this project was to create a more effective solution for detecting increasingly sophisticated phishing attempts that bypass traditional security measures.</p>
+                        
+                        <div class="mt-4 text-center">
+                            <a href="https://github.com/handsomemedia1/Behavioral-Phishing-Detection" class="btn btn-primary" target="_blank">View on GitHub</a>
+                            <a href="/" class="btn btn-secondary ms-2">Try the Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-3">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Behavioral Phishing Detection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
